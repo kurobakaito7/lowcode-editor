@@ -29,6 +29,11 @@ function HoverMask({ portalWrapperClassName, containerClassName, componentId }: 
         updatePosition();
     }, [componentId]);
 
+    // 组件被删除后高亮框也变化
+    useEffect(() => {
+        updatePosition();
+    }, [components])
+
     function updatePosition() {
         if (!componentId) return;
 
@@ -104,7 +109,7 @@ function HoverMask({ portalWrapperClassName, containerClassName, componentId }: 
                         whiteSpace: 'nowrap',
                     }}
                 >
-                    {curComponent?.name}
+                    {curComponent?.desc}
                 </div>
             </div>
         </>
