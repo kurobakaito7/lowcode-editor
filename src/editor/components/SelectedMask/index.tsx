@@ -7,6 +7,8 @@ import {
   import { getComponentById, useComponentsStore } from '../../stores/components';
   import { Dropdown, Popconfirm, Space } from 'antd';
   import { DeleteOutlined } from '@ant-design/icons';
+  // import ResizeObserver from 'resize-observer-polyfill'; // 如果需要 polyfill 支持所有浏览器
+
   
   interface SelectedMaskProps {
     portalWrapperClassName: string
