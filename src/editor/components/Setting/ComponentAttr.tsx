@@ -8,10 +8,15 @@ export function ComponentAttr() {
     const { curComponentId, curComponent, updateComponentProps } = useComponentsStore();
     const { componentConfig } = useComponentConfigStore();
 
+    // useEffect(() => {
+    //     const data = form.getFieldsValue();
+    //     form.setFieldsValue({ ...data, ...curComponent?.props });
+    // }, [curComponent]);
+
     useEffect(() => {
-        const data = form.getFieldsValue();
-        form.setFieldsValue({ ...data, ...curComponent?.props });
-    }, [curComponent]);
+        form.resetFields();
+        form.setFieldsValue({...curComponent?.props});
+    }, [curComponent, form]);
 
     if (!curComponentId || !curComponent) return null;
 
