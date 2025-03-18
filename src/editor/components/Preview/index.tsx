@@ -1,5 +1,5 @@
 import { message } from "antd";
-import React, { act, useRef } from "react";
+import React, { useRef } from "react";
 import { useComponentConfigStore } from "../../stores/component-config";
 import { Component, useComponentsStore } from "../../stores/components"
 import { ActionConfig } from "../Setting/ActionModal";
